@@ -1,6 +1,14 @@
 services:
   web:
-    image: weshigbee/foo-inc:v2
+    image: weshigbee/foo-inc:v3
     build: .
     ports:
       - "8080:80"
+  db:
+    image: postgres:15.10
+    environment:
+      POSTGRES_PASSWORD: foo
+  adminer:
+    image: adminer
+    ports:
+      - "8081:8080"
