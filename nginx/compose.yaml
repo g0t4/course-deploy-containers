@@ -1,6 +1,6 @@
 services:
   web:
-    image: weshigbee/foo-inc
+    image: weshigbee/foo-inc:v2
     build: .
     ports:
       - "8080:80"
